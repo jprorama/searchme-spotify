@@ -48,7 +48,7 @@ token = util.prompt_for_user_token(username, scope)
 
 if token:
     sp = spotipy.Spotify(auth=token)
-    results = sp.current_playback()
+    results = sp.current_playback(additional_types="track,episode")
     if args.debug:
         print(json.dumps(results))
 
