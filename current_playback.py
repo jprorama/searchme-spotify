@@ -68,6 +68,7 @@ if token:
     row['device_id'] = results['device']['id']
     row['device_name'] = results['device']['name']
     row['is_playing'] = results['is_playing']
+    row['currently_playing_type'] = results['currently_playing_type']
     row['json'] = json.dumps(results)
 
     # insert into db
